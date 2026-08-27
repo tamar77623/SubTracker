@@ -1,0 +1,120 @@
+/* ألوان عامة وإعدادات الخط */
+@import url('https://googleapis.com');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at center, #1e1e2f 0%, #11111b 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #f8fafc;
+}
+
+/* حاوية النموذج الرئيسية (التصميم الداكن) */
+.container {
+    background: #1a1a26;
+    padding: 40px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(99, 102, 241, 0.1); /* توهج خفيف عند التمرير */
+}
+
+/* تصميم موحد للمدخلات والقوائم باللون الداكن */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #2d2d3f;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #f1f5f9;
+    background-color: #222233;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* تغيير لون النص المؤقت (Placeholder) ليناسب الخلفية الداكنة */
+::placeholder {
+    color: #64748b;
+    opacity: 1;
+}
+
+/* تحسين شكل القائمة المنسدلة في الوضع الداكن */
+select option {
+    background-color: #1a1a26;
+    color: #f1f5f9;
+}
+
+/* تأثير الإضاءة (Focus) عند الضغط على الحقول */
+input:focus,
+select:focus {
+    border-color: #6366f1; /* لون نيون بنفسجي */
+    background-color: #1e1e2f;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* تنسيق خاص لأيقونة حقل التاريخ في المتصفحات */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* تحويل أيقونة التقويم للون الأبيض */
+    cursor: pointer;
+}
+
+/* تصميم زر الحساب المضيء */
+button{
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+    box-shadow: 0 6px 25px rgba(168, 85, 247, 0.5);
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* تصميم نص النتيجة الداكن */
+h4,span{
+    text-align: center;
+    font-size: 18px;
+    color: #38bdf8; /* لون أزرق سماوي مضيء لإبراز النتيجة */
+    font-weight: 700;
+    word-wrap: break-word;
+    text-shadow: 0 2px 8px rgba(56, 189, 248, 0.2);
+    text-transform: capitalize;
+}
+#btn2{
+  display: none;
+}

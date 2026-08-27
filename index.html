@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>SubTracker</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="inp1" placeholder="Enter the service name">
+        <input type="number" id="inp2" placeholder="Enter the subscription amount">
+        <select id="select1">
+            <option value="" hidden disabled selected id="option1">Please select your currency</option>
+            <option value="$">USD</option>
+            <option value="€">EURO</option>
+            <option value="£">British pound</option>
+        </select> <!-- تم تصحيح هذا السطر بإضافة شرطة الإغلاق المائلة / -->
+        <select id="select2">
+            <option value="" hidden disabled selected>Please select Billing Cycle</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+        </select>
+        <input type="date" id="inp3" placeholder="Enter Next Renewal Date">
+        <input type="text" id="inp4" placeholder="Enter the subscription category (optional)">
+        <button id="btn">Calculate Expenses</button>
+        <h4 id="h4"></h4>
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <button id="btn2">Clear Result</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
